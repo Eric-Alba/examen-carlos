@@ -1,11 +1,10 @@
-version: '3.8'
 services:
   proxy:
     image: nginx:latest
     ports:
       - "80:80"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
     networks:
       - red_interna
     depends_on:
@@ -17,18 +16,15 @@ services:
     networks:
       - red_interna
     volumes:
-      - contenido_web:/usr/share/nginx/html
+      - ./html:/usr/share/nginx/html:ro
 
   web2:
     image: nginx:latest
     networks:
       - red_interna
     volumes:
-      - contenido_web:/usr/share/nginx/html
+      - ./html:/usr/share/nginx/html:ro
 
 networks:
   red_interna:
     driver: bridge
-
-volumes:
-  contenido_web:
