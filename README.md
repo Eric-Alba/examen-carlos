@@ -39,6 +39,7 @@ Si un servidor "muere", el otro debe seguir funcionando:
 
 ### C. Verificación de Aislamiento
 Intenta acceder directamente a un backend por su IP interna desde tu navegador. No podrás, porque no tienen puertos mapeados al exterior. Solo el Proxy tiene permiso para hablar con ellos.
+<img width="554" height="754" alt="image" src="https://github.com/user-attachments/assets/de53292b-329a-4dad-bba2-8a11c1c5f429" />
 
 ### D. Verificación de Volumen Compartido
 Cualquier cambio que hagas en el archivo ./html/index.html de tu ordenador se reflejará instantáneamente en ambos servidores sin necesidad de reiniciar nada.
