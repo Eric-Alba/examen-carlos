@@ -30,6 +30,7 @@ Este proyecto despliega un entorno de alta disponibilidad totalmente automatizad
 Para ver cómo el proxy reparte el tráfico entre los dos servidores:
 docker-compose logs -f proxy
 Refresca el navegador varias veces y verás en los logs cómo las peticiones se alternan o se distribuyen.
+<img width="1100" height="508" alt="image" src="https://github.com/user-attachments/assets/e625ee01-29e9-419b-bd12-eff13b31f9e1" />
 
 ### B. Verificación de Alta Disponibilidad
 Si un servidor "muere", el otro debe seguir funcionando:
